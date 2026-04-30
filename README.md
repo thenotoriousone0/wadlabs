@@ -26,7 +26,7 @@ php/
     <tr>
       <td><b>I am a student at Strathmore University studying BBIT in second year.</b></td>
       <td width="50%" rowspan="4">
-        <img alt="Photo" src="assets/images/REPLACE_WITH_IMAGE_NAME.EXT" />
+        <img alt="Photo" src="C:\Users\Mark\Pictures\Camera Roll\WIN_20251014_15_36_03_Pro.jpg"/>
       </td>
     </tr>
     <tr>
