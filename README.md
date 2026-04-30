@@ -20,11 +20,11 @@ php/
 
 ## The Adventurer (Me)
 
-<h2 align="center">YOUR_NAME</h2>
+<h2 align="center">MARK NYANGI</h2>
 <table>
   <tbody>
     <tr>
-      <td><b>Information</b></td>
+      <td><b>I am a student at Strathmore University studying BBIT in second year.</b></td>
       <td width="50%" rowspan="4">
         <img alt="Photo" src="assets/images/REPLACE_WITH_IMAGE_NAME.EXT" />
       </td>
@@ -32,11 +32,11 @@ php/
     <tr>
       <td>
         <ul>
-          <li>YOUR_PREFERRED_NAME (How should I call you)</li>
-          <li>YOUR_STRATHMORE_Admission_number</li>
-          <li>YOUR_STRATHMORE_EMAIL</li>
+          <li>Mark</li>
+          <li>222168</li>
+          <li>njau.mark@strathmore.edu</li>
         </ul>
-      </td>
+      </td> 
     </tr>
   </tbody>
 </table>
