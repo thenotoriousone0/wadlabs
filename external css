@@ -1,0 +1,12 @@
+/*an external css file*/
+
+#features{
+
+    background-color:beige;
+}
+
+body,header,h1,section{
+    border-style:dotted;
+    border-width:2px;
+    border-color:turquoise;
+}
