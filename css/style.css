@@ -119,4 +119,37 @@ header > b{
 
 
 }
+nav{
+   margin-top:10px;
+}/*what selector is this? (element)*/
+nav ul{
+   list-style: none; 
+   padding: 0;
+   margin: 0;
+
+/*cahnge the display of the list items to horizontal*/
+   display: flex;
+   justify-content: center;
+   gap: 20px; /*space between items*/
+}
+nav ul li a{
+   text-decoration: none; /*remove underline*/
+   color: var(--col-bg-deep);
+   font-size: 1.1em;
+  letter-spacing: 2px;
+   text-transform: uppercase;
+    padding: 8px 18px;
+  
+   border :1px solid var(--col-cyan-light);
+   border-width: 1px;
+   border-style :solid;
+   border-color: var(--col-cyan-light);
+   border-radius: 8px;
+
    
+}
+nav ul li a:hover{
+   background-color: var(--col-cyan-light);
+   border-color: var(--col-pink-soft);
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
