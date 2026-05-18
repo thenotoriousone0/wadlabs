@@ -179,7 +179,7 @@ section :hover{
    border-left-color: var(--col-cyan);
 }
 
-p{
+p,h4{
    color: var(--col-cream);
 }
 
@@ -203,3 +203,27 @@ h2{
    border-bottom-width: 2px;
    border-bottom-style: solid;
 }
+
+main ul,main ol{
+   padding-left: 24px;
+   color:var(--col-cream);
+}
+
+main li{
+   margin-left: 4px;
+}
+/*psuedo class selector*/
+li :first-child{
+   color: var(--col-pink-soft);
+   font-weight:bold;
+}
+
+/*psuedo element selector*/
+main li::marker{
+   color: var(--col-cyan);
+}
+
+main ol li::marker{
+   color: var(--col-coral);
+}
+
