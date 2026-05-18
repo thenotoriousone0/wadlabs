@@ -244,3 +244,14 @@ footer p{
 hr{
    border: 1px solid var(--col-cyan);
 }
+
+/*character grid*/
+.character-grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr; /*2 equal columns*/
+   gap: 10px; /*space between grid items*/
+}
+
+article h4{
+   border-top:2px solid var(--col-coral);
+}
