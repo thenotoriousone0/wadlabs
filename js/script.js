@@ -162,3 +162,28 @@ console.log(Object.values(student));
 //getting the both keys and values as an array
 console.log(Object.entries(student));
 
+
+/* DOM - Document Object Model */
+console.log(document); 
+console.log(document);
+
+// Element on our page (Variables)
+const heading = document.querySelector("#mainHeading");
+console.log(heading);
+const previewImage = document.querySelector("img");
+console.log(previewImage);
+const aboutSection = document.querySelector(".about");
+console.log(aboutSection);
+
+const sections = document.querySelectorAll("section");
+console.log(sections);
+
+const allNavLinks = document.querySelectorAll("nav a");
+console.log(allNavLinks);
+
+let aboutParagraph = document.querySelectorAll("#about p");
+
+//change its text
+
+    aboutParagraph.textContent = "This text has changed!";
+    aboutParagraph.style.color = "red";  
