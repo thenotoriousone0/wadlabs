@@ -154,11 +154,11 @@ bbit_2b.forEach(function(student) {
 });
 
 //getting the keys of as an array
-console.log(student)
+console.log(Object.keys(student));
 
 //getting the values as an array
-//console.log(student.values());
+console.log(Object.values(student));
 
 //getting the both keys and values as an array
-//console.log(student.entries());
+console.log(Object.entries(student));
 
