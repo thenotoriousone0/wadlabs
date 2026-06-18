@@ -1,189 +1,225 @@
-//let age = 20;
-//var course = "BBIT";
-//const university = "Strathmore";
+let age = 20;
+var course = "BBIT";
+const university = "strathmore";
+const year = 2026;
 
 
 //Redeclare
-//let age=40;
-//var course = "BBA";
-//const university = "Nairobi University";
+//let age = 40;
+//var course="Law";
+//=== , ==
 
 //Reassign
-//age = 40;
-//course = "BBA";
-//university = "Nairobi University";
-//if (true) {
-  //  let time = "11:30";
-  //  var day = "4th";
-  //  const year = "2026";
-//}
-//console.log(time); 
-//console.log(day);
-//console.log(year);
+//university = "USIU";
+
+// scope (const, let- block) var, global
 
 //function definition
+// year = 2026;
 /**
- * @param {int} height - The height of the rectangle
- * @param {int} width - The width of the rectangle
- * @returns {int} The area of the rectangle
+ * A function that calculates the area of a rectangle
+ * @param {int} height 
+ * @param {int} width 
+ * @return area
  */
 
-function calculateArea(height, width) {
-    if (height == null){
-        console.log("Height is required");
-        return console.log("Height is missing!");
- }else if (width == null){
-        console.log("Width is required");
-        return console.log("Width is missing!");
- }else{
-     area = height * width
+function calculateArea(height, width){
+    let area = 0
+    if (height === null) {
+        console.log('height missing!')
+    }else if (width === null) {
+        console.log('width missing!')
+    }else {
+    area = height * width
     return area;
- }
- //console.log("function calculateArea");   
- //alert("Function called/executed");
+    }
+    //console.log("function calculateArea")
+    //alert("Function called/executed");
 }
+// return a value is NOT printing out
+//execution - called
+console.log( calculateArea(20, 3) ) //one output 60
+console.log( calculateArea(20) ) // one output width
+console.log( calculateArea() ) //height missing or??
 
-//execution
-console.log(calculateArea(20,3)  ) //a function call
-console.log(calculateArea(20)  ) //a function call
-console.log(calculateArea()  ) //a function call
-
-//function expression
-const add = function(number_1, number_2) {
-    return number_1 + number_2;
+// function expression
+const add = function add(number_1, number_2){
+    return number_1 + number_2
 }
-console.log(add(4 , 2)); //function call
+console.log(add(4, 2) )
 
-// arrow functions
+//arrow  functions
 const multiply = (x, y) => x * y;
 
-console.log(multiply(2, 5)); //function call
-
-//Jvascript arrays
-const scores =[45, 56, 67, 67, 78];
+console.log(multiply(2,5));
+ // Javascript arrays
+const scores = [45, 56, 67,67,78];
 //access
 
 //45
-console.log(scores[0]);
+console.log(scores[0])
 //56
-console.log(scores[1]);
+console.log(scores[1])
 //67
-console.log(scores[2]);
+console.log(scores[2])
 //78
-console.log(scores[4]);
+console.log(scores[4])
 
-let student_names = ["John", "Jane", "Doe", "Smith"];
-//access
+let students_names=["Collins", "Kanyi", "Nyangi", "Jane"];
 
-console.log(student_names[2]); //Doe
+//print out Nyangi on the console window
+console.log(students_names[2])
 
 let governors=[
-    [47,"Sakaja"],
-    [1, "Abdullswamad Sherrif"],
-    [21, "Irungu Kangata"],
+    [47,"Johnson sakaja"],
+    [1,"Abdullswamad Sherrif"],
+    [21,"Irungu Kangata"],
 ];
 
-//The Governor of county number 1 is Abdullswamad Sherrif
-console.log("The Governor of county number ", governors[1][0] ,"is" , governors[1][1]);
+///The Governor of county number 1 is Abdullswamad Sherrif
+console.log("The governor of county number ", governors[1][0],"is",governors[1][1]);
 
-//map( perform an operation on each element)
-let doubled_scores = scores.map(x => x * 2);
-console.log(doubled_scores);
+//map (perform an operation on each element)
+let doubled = scores.map(x => x * 2); //multiply each score by 2
+console.log(doubled)
 
 //properties
-//The class has j students
-console.log("The class has", student_names.length, "students");
+//The class has j students (student_names)
+console.log("The class has ", students_names.length, "students")
 
-//kenya has b governors
-console.log("Kenya has", governors.length, "governors");
+//Kenya has b governors (governors)
+console.log("Kenya has ", governors.length, "governors")
 
-//for 
-for (let index in scores) {
-    console.log(scores[index]);
+//for in
+for(let index in scores){
+    console.log(scores[index])
 }
-
 //for of
-for (let score of scores) {
-    console.log(score);
+for(let score of scores){
+    console.log(score)
 }
 
 //forEach
-scores.forEach(function(score) {
-    console.log("score: ", score);
-});
+scores.forEach(function(score){
+    console.log("score: ",score)
+})
 
 const student = {
-    name:"Basweti",
+    name: "Ronaldo",
     age: 20,
-    passed:true,
-    grade: "A",
-    "admission number": 222168,
-    courses: "BBIT",
+    passed: true,
+    grade: 'A',
+    "admission number" : 220858,
+    course: "BBIT",
     group: "2A",
     attendance: 20,
-    addAttendance: function() {
-        this.attendance =this.attendance + 1;
-
+    addAttendance: function(){
+        this.attendance += 1;
+        //this.attendance +1
     }
 };
 
-//accessing items
+//accessing properties
 //student name
-console.log('My name is'
-, student.name,"from",
-student["admission number"],
-"University"
+console.log ('My name is',
+    student.name, "from",
+    student["admission number"],
+    "university"
 );
 
-// a method in the object
-student.addAttendance();
-console.log(student.attendance);//21
+//a method in the object
+student.addAttendance(); //add attendance by 1
+console.log(student.attendance); //21
 
 //array of objects
 let bbit_2b = [
-    {adm:222168, name:"Basweti"},
-    {adm:221932, name:"John"},
-    {adm:221370, name:"Jane"},
-    {adm:221932, name:"Doe"},
+    {adm: 223251, name:"Blessing"},
+    {adm: 192977, name:"Ryan"},
+    {adm: 220024, name:"Ambrose"},
+    {adm: 220941, name:"Neema"}
 ];
-
-//Print the name of all students in 2b using a loop
-
-bbit_2b.forEach(function(student) {
-    console.log(student.name); 
+//Print out the name of all students in bbit 2b using a loop
+bbit_2b.forEach(function(student){
+    console.log(student.name);
 });
 
-//getting the keys of as an array
+//@TODO : Show looping of objects 
+
+//getting the keys of an object as an array
 console.log(Object.keys(student));
 
-//getting the values as an array
+//getting the values of an object as an array
 console.log(Object.values(student));
 
-//getting the both keys and values as an array
+//getting both keys and values of an object as an array
 console.log(Object.entries(student));
 
-
-/* DOM - Document Object Model */
-console.log(document); 
+/* DOM - Document Object Model (tree-like) */
 console.log(document);
+//console.log(document);
 
-// Element on our page (Variables)
+//Elements on our page (variables)
 const heading = document.querySelector("#mainHeading");
 console.log(heading);
 const previewImage = document.querySelector("img");
 console.log(previewImage);
-const aboutSection = document.querySelector(".about");
+const aboutSection = document.getElementById('about');
 console.log(aboutSection);
+//all the sections
+const allSections = document.querySelectorAll('section');
+console.log(allSections);
 
-const sections = document.querySelectorAll("section");
-console.log(sections);
-
-const allNavLinks = document.querySelectorAll("nav a");
+const allNavLinks = document.querySelectorAll('nav a');
 console.log(allNavLinks);
 
-let aboutParagraph = document.querySelectorAll("#about p");
+let aboutParagraph = document.querySelector("#about p");
 
 //change its text
+aboutParagraph.textContent = "This text was changed!";
+aboutParagraph.style.color = "red";
 
-    aboutParagraph.textContent = "This text has changed!";
-    aboutParagraph.style.color = "red";  
+//setting/setter - updating the page from js
+
+//via the DOM
+previewImage.setAttribute("title","New Title of Image");
+previewImage.setAttribute("alt","New alternative text for the image");
+console.log(previewImage.alt);
+console.log(previewImage.title);
+
+//Event handling - Events(user events - click , key events ,scroll)
+
+//get the element of interest - button with an id of changeTextBtn
+let changeTextBtn = document.querySelector("#changeTextBtn");
+let demoText = document.querySelector("#demoText");
+// we are handling the click event for the button with an id of changeTextBtn
+changeTextBtn.addEventListener("click",function(event){
+    console.log("someone clicked me!");
+    demoText.textContent = "I have been changed when you clicked";
+    demoText.style.color = "orange"
+    demoText.style.fontSize = "16px";
+});
+
+//use Case 2
+let highlightSectionsBtn = document.querySelector("#highlightSectionsBtn");
+highlightSectionsBtn.addEventListener("click",function(event) { 
+    //one
+    //document.querySelector("#about").classList.toggle("section-highlight");
+    //highlight all the sections
+    //document.querySelectorAll("section").classList.toggle("section-highlight");
+
+    document.querySelectorAll("section").forEach(function(section){
+        section.classList.toggle("section-highlight");
+    });
+});
+
+
+//get th textbox with id nameInput
+document.querySelector("#nameInput").addEventListener("input",function(event){
+
+    document.querySelector("#nameOutput").textContent =
+    "Hello" + document.querySelector("#nameInput").value + "!";
+
+    });
+
+
+
