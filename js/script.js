@@ -279,6 +279,11 @@ document.querySelector("#nameInput").addEventListener("input",function(event){
           button.textContent = "Delete";
           li.textContent = wishListInputValue;
 
+          // we are going to add an event listener with the new dynamic element
+          button.addEventListener("click",event =>{
+            li.remove();
+          });
+
           li.appendChild(button);
        
        // we append the list to the UL
@@ -288,3 +293,83 @@ document.querySelector("#nameInput").addEventListener("input",function(event){
        wishListInput.value = "";
     }
     });
+
+    // case 6b - removing items from wishlist
+    let deleteButtons = document.querySelectorAll("#wishlistItems button");
+    console.log(deleteButtons);
+
+    //iterate a.k.a loop through the buttons
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", event => {
+            // console.log("delete button clicked");
+
+            // in css
+            // how do we get the first list item in an unordered list
+            // given that the ul has an id of #wishlistItems
+
+            // #wishlistItems li
+            // #wishlistItems>li
+            // #wishlistItems li:first
+
+            // querySelector - returns the first matching element
+            // let first_li= document.querySelector("#wishlistItems li");
+            // first_li.remove();
+            // for one or for many
+            // <li> <button>Delete</button> </li>
+            //@TODO , how do you use parent , parentElement
+            button.closest("li").remove();
+            //button.parentElement.remove();
+        });
+
+    });
+    // case 7 - submit form / validation
+    // show what someone filled in the form
+
+    let sumbitButton = document.querySelector("#feedbackForm button");
+    let feedbackButton = document.querySelector("#feedbackForm");
+    let feedbackOutput = document.querySelector("#feedbackOutput"); //div
+
+    feedbackForm.addEventListener("submit", event => {
+        // prevent the form from being submitted normallyy
+        event.preventDefault();
+        //console.log("submit button clicked");
+
+       // get the values fille in the form
+       const name = document.querySelector("#fanName"); // name
+       const email = document.querySelector("#fanEmmail"); // email
+       const message = document.querySelector("#fanMessage"); // message , textarea
+      //updating the div
+
+       feedbackOutput.innerHTML = 
+          "<strong> Fan Feedback submitted </strong> <br>" +
+          "<p>Name: "+ name.value + "</p>" +
+          "<p>Email: "+ email.value + "</p>" +
+          "<p>Message: "+ message.value + "</p>";
+       
+
+       //clear the form fields
+       name.value ="";
+       email.value ="";
+       message.value ="";
+
+       // add success styles to the output div
+       feedbackOutput.classList.add('success-text');
+
+});
+
+// forgotten
+let resetBtn = document.querySelector("resetButton")
+resetBtn.addEventListener("click" , event =>{
+
+     demoText.textContent = 
+     "Click the button to modify this text using JavaScript.";
+    demoText.style.color = "black"
+    demoText.style.fontSize = "16px"; // has no effect 
+
+    //undo the highlight of the sections
+    document.querySelectorAll("section").forEach(function(section){
+        //section.classList.toggle("section-highlight");
+        section.classList.remove("section-highlight");
+    });
+
+});
